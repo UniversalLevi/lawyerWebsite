@@ -12,4 +12,4 @@ export { faqs } from "./faqs";
 export { articles, getArticle, getArticlesByPractice } from "./articles";
 export { legalCopy, disclaimerPage, privacyPage, termsPage } from "./legal";
 export { matterTypes, contactMethods } from "./forms";
-export { reviews } from "./reviews";
+export { photos, galleryPhotos, homeStripPhotos, photoNote } from "./photos";

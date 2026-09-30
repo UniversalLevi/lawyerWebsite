@@ -1,9 +1,11 @@
 import { ContactForm } from "@/components/forms/ContactForm";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Figure } from "@/components/ui/Figure";
 import { contactInfo, formatAddressLines } from "@/content/contact";
 import { lawyerProfile } from "@/content/lawyer";
 import { legalCopy } from "@/content/legal";
+import { photos } from "@/content/photos";
 import {
   breadcrumbSchema,
   graph,
@@ -116,6 +118,7 @@ export default async function ContactPage({
                 LinkedIn
               </a>
             </p>
+            <Figure photo={photos.chambers} />
           </div>
           <div>
             <h2>Send an enquiry</h2>

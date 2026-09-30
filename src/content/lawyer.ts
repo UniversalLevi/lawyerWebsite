@@ -49,13 +49,12 @@ export const lawyerProfile = {
     "Advocate Manoj Kumar Singh practises from S&M Law Firm in Howrah, West Bengal. The chambers advise and represent clients in criminal defence, bail, civil litigation, family and matrimonial disputes, property matters, cyber crime, commercial disputes, legal transactions and arbitration. The practice is associated with the Howrah District Court, the Metropolitan Magistrates Court, Calcutta, and the Calcutta High Court.",
   portrait: {
     /**
-     * Place an authentic photograph at /public/images/advocate-manoj-kumar-singh.webp
-     * and set src to that path. Do not use a generated or stock portrait.
+     * Authentic photograph supplied by the chambers.
      */
-    src: null as string | null,
-    alt: "Advocate Manoj Kumar Singh of S&M Law Firm, Howrah, West Bengal",
-    width: 720,
-    height: 900,
+    src: "/images/advocate-manoj-kumar-singh-portrait.jpg" as string | null,
+    alt: "Advocate Manoj Kumar Singh of S&M Law Firm, Howrah, West Bengal, at his chambers",
+    width: 1200,
+    height: 1200,
     placeholderCaption:
       "Professional photograph of Advocate Manoj Kumar Singh will be published here once provided by the chambers.",
   },

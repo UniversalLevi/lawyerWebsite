@@ -1,7 +1,9 @@
 import { publishedCases } from "@/content/courts";
 import { lawyerProfile } from "@/content/lawyer";
+import { photos } from "@/content/photos";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Figure } from "@/components/ui/Figure";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -45,6 +47,7 @@ export default function CasesPage() {
       </header>
       <section className="section section-ivory">
         <div className="wrap-narrow">
+          <Figure photo={photos.portrait} className="figure-in-prose" />
           {publishedCases.length === 0 ? (
             <div className="empty-panel">
               <p>

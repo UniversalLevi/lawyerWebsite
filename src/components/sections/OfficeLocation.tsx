@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { contactInfo, formatAddressLines } from "@/content/contact";
 import { lawyerProfile } from "@/content/lawyer";
+import { photos } from "@/content/photos";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function OfficeLocation() {
@@ -57,13 +58,14 @@ export function OfficeLocation() {
             </a>
           </div>
         </div>
-        <div className="photo-frame">
+        <div className="photo-frame photo-square">
           <Image
-            src="/images/hero-architecture.jpg"
-            alt="Architectural interior suggesting a courtroom chamber"
+            src={photos.chambers.src}
+            alt={photos.chambers.alt}
             fill
             sizes="(max-width: 980px) 100vw, 46vw"
           />
+          <p className="photo-caption">{photos.chambers.caption}</p>
         </div>
       </div>
     </section>

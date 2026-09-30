@@ -1,8 +1,10 @@
 import { faqs } from "@/content/faqs";
 import { lawyerProfile } from "@/content/lawyer";
+import { photos } from "@/content/photos";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
+import { Figure } from "@/components/ui/Figure";
 import { breadcrumbSchema, graph, personSchema, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -60,6 +62,7 @@ export default function FaqsPage() {
       </header>
       <section className="section section-ivory">
         <div className="wrap-narrow faq-list">
+          <Figure photo={photos.chambers} className="figure-in-prose" />
           {faqs.map((item) => (
             <details className="faq-item" key={item.question} open>
               <summary>{item.question}</summary>

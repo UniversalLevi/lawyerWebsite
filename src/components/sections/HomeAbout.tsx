@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { lawyerProfile } from "@/content/lawyer";
+import { homeStripPhotos, photoNote, photos } from "@/content/photos";
+import { PhotoGallery } from "@/components/ui/Figure";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function HomeAbout() {
@@ -18,15 +20,18 @@ export function HomeAbout() {
             </Link>
           </p>
         </div>
-        <div className="photo-frame">
+        <div className="photo-frame photo-square">
           <Image
-            src="/images/chamber-still-life.jpg"
-            alt="Law books and papers in a professional chambers setting"
+            src={photos.chambers.src}
+            alt={photos.chambers.alt}
             fill
             sizes="(max-width: 980px) 100vw, 50vw"
           />
-          <p className="photo-caption">S&amp;M Law Firm · Howrah</p>
+          <p className="photo-caption">{photos.chambers.caption}</p>
         </div>
+      </div>
+      <div className="wrap" style={{ marginTop: "2.4rem" }}>
+        <PhotoGallery photos={homeStripPhotos} note={photoNote} />
       </div>
     </section>
   );

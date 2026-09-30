@@ -8,9 +8,11 @@ import {
 import { getArticle, getArticlesByPractice, type Article } from "@/content/articles";
 import { lawyerProfile } from "@/content/lawyer";
 import { legalCopy } from "@/content/legal";
+import { photos } from "@/content/photos";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
+import { Figure } from "@/components/ui/Figure";
 import { breadcrumbSchema, graph, personSchema, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -91,6 +93,7 @@ export default async function PracticeAreaPage({
 
       <article className="section section-ivory">
         <div className="wrap-narrow prose">
+          <Figure photo={photos.portrait} className="figure-in-prose" />
           {area.intro.map((paragraph) => (
             <p key={paragraph.slice(0, 36)}>{paragraph}</p>
           ))}

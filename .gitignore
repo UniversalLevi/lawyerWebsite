@@ -30,5 +30,5 @@ Thumbs.db
 *.tsbuildinfo
 next-env.d.ts
 
-# vercel
-.vercel
+# temp source photographs (canonical copies live in public/images)
+/imagesTemp

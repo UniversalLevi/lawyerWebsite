@@ -3,10 +3,12 @@ import { contactInfo, formatAddressLines } from "@/content/contact";
 import { courts } from "@/content/courts";
 import { lawyerProfile } from "@/content/lawyer";
 import { practiceAreas } from "@/content/practiceAreas";
+import { galleryPhotos, photoNote, photos } from "@/content/photos";
 import { reviews } from "@/content/reviews";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
+import { Figure, PhotoGallery } from "@/components/ui/Figure";
 import {
   breadcrumbSchema,
   graph,
@@ -71,6 +73,8 @@ export default function AboutPage() {
             21/1 Dobson Road, near Howrah A.C. Market, Babudanga, Howrah, West
             Bengal 711101.
           </p>
+
+          <Figure photo={photos.portrait} className="figure-in-prose" />
 
           <h2>Professional overview</h2>
           {lawyerProfile.overview.map((paragraph) => (
@@ -164,6 +168,9 @@ export default function AboutPage() {
               <strong>{item.title}.</strong> {item.text}
             </p>
           ))}
+
+          <h2>Photographs</h2>
+          <PhotoGallery photos={galleryPhotos} note={photoNote} />
 
           <h2>Office information</h2>
           <address className="address-block">

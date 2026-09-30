@@ -50,7 +50,7 @@ export function organizationSchema() {
     url: siteConfig.origin,
     telephone: contactInfo.phone.e164,
     email: contactInfo.email.display,
-    image: `${siteConfig.origin}/images/hero-architecture.jpg`,
+    image: `${siteConfig.origin}/images/advocate-manoj-kumar-singh-chambers.jpg`,
     description: `${lawyerProfile.firm.name} is the Howrah chambers of ${lawyerProfile.displayName}, providing legal representation and counsel in Howrah, West Bengal.`,
     address: {
       "@type": "PostalAddress",

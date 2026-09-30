@@ -8,6 +8,8 @@ import { formatDisplayDate } from "@/lib/format";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
+import { Figure } from "@/components/ui/Figure";
+import { photos } from "@/content/photos";
 import {
   breadcrumbSchema,
   graph,
@@ -102,6 +104,7 @@ export default async function ArticlePage({ params }: { params: Promise<Params> 
             <span>Published: {formatDisplayDate(article.publishedAt)}</span>
             <span>Last updated: {formatDisplayDate(article.updatedAt)}</span>
           </p>
+          <Figure photo={photos.portrait} className="figure-in-prose" />
           {article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>

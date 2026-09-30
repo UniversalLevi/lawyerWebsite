@@ -2,9 +2,11 @@ import Link from "next/link";
 import { articles } from "@/content/articles";
 import { lawyerProfile } from "@/content/lawyer";
 import { legalCopy } from "@/content/legal";
+import { photos } from "@/content/photos";
 import { formatDisplayDate } from "@/lib/format";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { Figure } from "@/components/ui/Figure";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -30,20 +32,23 @@ export default function InsightsIndexPage() {
         ])}
       />
       <header className="page-hero">
-        <div className="wrap">
-          <Breadcrumbs
-            items={[
-              { href: "/", label: "Home" },
-              { label: "Legal Insights" },
-            ]}
-          />
-          <p className="small-caps">05 — Legal Insights</p>
-          <h1>Legal insights</h1>
-          <p className="lede">
-            These notes are published by {lawyerProfile.displayName} of{" "}
-            {lawyerProfile.firm.name}, Howrah, as general information. They are
-            not advice on a particular case.
-          </p>
+        <div className="wrap page-hero-split">
+          <div>
+            <Breadcrumbs
+              items={[
+                { href: "/", label: "Home" },
+                { label: "Legal Insights" },
+              ]}
+            />
+            <p className="small-caps">05 — Legal Insights</p>
+            <h1>Legal insights</h1>
+            <p className="lede">
+              These notes are published by {lawyerProfile.displayName} of{" "}
+              {lawyerProfile.firm.name}, Howrah, as general information. They are
+              not advice on a particular case.
+            </p>
+          </div>
+          <Figure photo={photos.portrait} className="figure-on-navy" />
         </div>
       </header>
       <section className="section section-ivory">

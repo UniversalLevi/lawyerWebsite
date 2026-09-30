@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { practiceAreas } from "@/content/practiceAreas";
 import { lawyerProfile } from "@/content/lawyer";
+import { photos } from "@/content/photos";
 import { PracticeIcon } from "@/components/ui/Icons";
+import { Figure } from "@/components/ui/Figure";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
@@ -30,20 +32,23 @@ export default function PracticeIndexPage() {
         ])}
       />
       <header className="page-hero">
-        <div className="wrap">
-          <Breadcrumbs
-            items={[
-              { href: "/", label: "Home" },
-              { label: "Practice Areas" },
-            ]}
-          />
-          <p className="small-caps">02 — Practice Areas</p>
-          <h1>Practice areas</h1>
-          <p className="lede">
-            {lawyerProfile.displayName} of {lawyerProfile.firm.name}, Howrah,
-            advises on the matters listed below. The pages describe the work in
-            general terms. They do not promise a result.
-          </p>
+        <div className="wrap page-hero-split">
+          <div>
+            <Breadcrumbs
+              items={[
+                { href: "/", label: "Home" },
+                { label: "Practice Areas" },
+              ]}
+            />
+            <p className="small-caps">02 — Practice Areas</p>
+            <h1>Practice areas</h1>
+            <p className="lede">
+              {lawyerProfile.displayName} of {lawyerProfile.firm.name}, Howrah,
+              advises on the matters listed below. The pages describe the work in
+              general terms. They do not promise a result.
+            </p>
+          </div>
+          <Figure photo={photos.portrait} className="figure-on-navy" />
         </div>
       </header>
       <section className="section section-ivory">

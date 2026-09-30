@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { calcuttaHighCourtNote, courts } from "@/content/courts";
 import { lawyerProfile } from "@/content/lawyer";
+import { photos, photoNote } from "@/content/photos";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ConsultationCta } from "@/components/sections/ConsultationCta";
+import { Figure } from "@/components/ui/Figure";
 import { breadcrumbSchema, graph, webPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -60,6 +62,24 @@ export default function CourtsPage() {
               </Link>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section section-paper">
+        <div className="wrap">
+          <h2>Photographs</h2>
+          <p className="lede">
+            Advocate Manoj Kumar Singh photographed during a visit to New Delhi.
+            These pictures are not photographs of the Howrah District Court, the
+            Metropolitan Magistrates Court, Calcutta, or the Calcutta High Court.
+          </p>
+          <div className="photo-gallery">
+            <Figure photo={photos.supremeCourtSteps} />
+            <Figure photo={photos.supremeCourt} />
+            <Figure photo={photos.supremeCourtCall} />
+            <Figure photo={photos.ambedkar} />
+          </div>
+          <p className="note">{photoNote}</p>
         </div>
       </section>
 

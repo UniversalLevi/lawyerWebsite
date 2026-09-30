@@ -37,14 +37,27 @@ All identity and copy that should stay consistent lives in `src/content/`:
 | `articles.ts` | Legal insights |
 | `faqs.ts` | Frequently asked questions |
 | `reviews.ts` | Approved client remarks (unpublished until `publish` is true) |
+| `photos.ts` | Authentic photographs of the advocate |
 | `site.ts` | Public origin used for canonical URLs and JSON-LD |
 
 Set `NEXT_PUBLIC_SITE_URL` to the live domain before launch.
 
-### Add a real photograph
+### Photographs
 
-1. Place an authentic portrait at `public/images/advocate-manoj-kumar-singh.webp` (or `.jpg`).
-2. In `src/content/lawyer.ts`, set `portrait.src` to `/images/advocate-manoj-kumar-singh.webp`.
+Authentic photographs live in `public/images/` and are listed in `src/content/photos.ts`. The portrait used in the hero is set on `lawyerProfile.portrait` in `src/content/lawyer.ts`.
+
+To change a photograph: overwrite the matching file in `public/images/` (keep the same filename) and, if the pixel size changed, update `width` / `height` in `src/content/photos.ts`. If you add a new filename, also update `src` in that file and, for the homepage hero, in `src/content/lawyer.ts`. Then restart or rebuild the site.
+
+| File in `public/images/` | Used for |
+| --- | --- |
+| `advocate-manoj-kumar-singh-portrait.jpg` | Hero, About, practice areas, insights, cases |
+| `advocate-manoj-kumar-singh-chambers.jpg` | Home About, contact, office, consultation |
+| `advocate-manoj-kumar-singh-supreme-court.jpg` | Home strip, About gallery, Courts |
+| `advocate-manoj-kumar-singh-supreme-court-call.jpg` | Home strip, About gallery, Courts |
+| `advocate-manoj-kumar-singh-supreme-court-steps.jpg` | Home strip, About gallery, Courts |
+| `advocate-manoj-kumar-singh-ambedkar.jpg` | Home strip, About gallery, Courts |
+
+Pictures taken at the Supreme Court of India in New Delhi are captioned as a visit. They must not be treated as a Supreme Court practice listing.
 
 Do not use a generated or stock portrait of another person.
 
